@@ -21,6 +21,6 @@ COPY watches.yaml ${HOME}/watches.yaml
 COPY roles/ ${HOME}/roles/
 COPY playbooks/ ${HOME}/playbooks/
 # Download and install grpc_health_probe
-#RUN curl -L https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v0.3.6/grpc_health_probe-linux-amd64 -o /usr/local/bin/grpc_health_probe && \
-#    chmod +x /usr/local/bin/grpc_health_probe
+RUN sudo curl -L https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v0.3.6/grpc_health_probe-linux-amd64 -o /usr/local/bin/grpc_health_probe && \
+    sudo chmod +x /usr/local/bin/grpc_health_probe
 
