@@ -20,7 +20,7 @@ RUN ansible-galaxy collection install -r ${HOME}/requirements.yml \
 COPY watches.yaml ${HOME}/watches.yaml
 COPY roles/ ${HOME}/roles/
 COPY playbooks/ ${HOME}/playbooks/# Ensure you're running as root for installation
-USER 1001
+USER 0
 
 # Download grpc_health_probe and set the executable permission
 RUN curl -L https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v0.3.6/grpc_health_probe-linux-amd64 -o /usr/local/bin/grpc_health_probe && \
